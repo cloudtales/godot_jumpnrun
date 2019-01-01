@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=3]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 80, 80 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 65535, 0, 0, 33, 0, 0, 131071, 0, 0, 65569, 0, 0, 196607, 0, 0, 131105, 0, 0, 262143, 0, 0, 196641, 0, 0, 327679, 0, 0, 262177, 0, 0, 393215, 0, 0, 327713, 0, 0, 458751, 0, 0, 393249, 0, 0, 524287, 0, 0, 458785, 0, 0, 589823, 0, 0, 524321, 0, 0, 655359, 0, 0, 589857, 0, 0, 720895, 0, 0, 655393, 0, 0, 786431, 0, 0, 720929, 0, 0, 851967, 0, 0, 786465, 0, 0, 917503, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0, 851997, 0, 0, 851998, 0, 0, 851999, 0, 0, 852000, 0, 0, 852001, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 200, 182 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2316, 898 )
